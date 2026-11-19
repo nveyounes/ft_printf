@@ -6,28 +6,12 @@
 /*   By: yfarhat <yfarhat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/18 17:07:46 by yfarhat           #+#    #+#             */
-/*   Updated: 2026/11/18 19:32:31 by yfarhat          ###   ########.fr       */
+/*   Updated: 2026/11/19 20:42:12 by yfarhat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	ft_writer(char *buff)
-{
-	int	i;
-	int	verf;
-
-	verf = 0;
-	i = 0;
-	while (buff[i])
-	{
-		verf = write(1, &buff[i], 1);
-		if (verf == -1)
-			return (-1);
-		i++;
-	}
-	return (i);
-}
 static int	ft_count_helper(long n, int count, int *offset, char *buff)
 {
 	if (n == 0)

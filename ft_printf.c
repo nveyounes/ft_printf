@@ -6,7 +6,7 @@
 /*   By: yfarhat <yfarhat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/17 16:01:58 by yfarhat           #+#    #+#             */
-/*   Updated: 2026/11/18 21:20:34 by yfarhat          ###   ########.fr       */
+/*   Updated: 2026/11/19 20:41:44 by yfarhat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,9 @@ static void	ft_init_table(t_fmt_fn *arr)
 	arr['i'] = ft_log_i;
 	arr['d'] = ft_log_i;
 	arr['x'] = ft_x;
+	arr['X'] = ft_X;
+	arr['u'] = ft_u;
+	arr['p'] = ft_p;
 }
 
 static int	ft_result_checker(t_fmt_fn *arr, int *i, char const *format, va_list *args)
