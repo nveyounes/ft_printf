@@ -6,7 +6,7 @@
 #    By: yfarhat <yfarhat@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/11/16 19:27:50 by yfarhat           #+#    #+#              #
-#    Updated: 2026/11/18 18:12:13 by yfarhat          ###   ########.fr        #
+#    Updated: 2026/11/21 21:04:47 by yfarhat          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,8 @@ CFLAGS = -Wall -Wextra -Werror
 AR = ar rcs
 RM = rm -f
 
-SRCS = ft_printf.c ft_chars.c ft_ints.c
+SRCS = ft_printf.c ft_chars.c ft_ints.c ft_bases.c ft_writer.c \
+	ft_all_in_one_base.c
 		  
 OBJS = $(SRCS:.c=.o)
 

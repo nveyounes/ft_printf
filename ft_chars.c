@@ -6,7 +6,7 @@
 /*   By: yfarhat <yfarhat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/17 16:11:00 by yfarhat           #+#    #+#             */
-/*   Updated: 2026/11/18 16:44:28 by yfarhat          ###   ########.fr       */
+/*   Updated: 2026/11/24 15:19:03 by yfarhat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_log_char(va_list *args)
 	char	c;
 
 	c = (unsigned char)va_arg(*args, int);
-	return (write(1, &c, 1) == -1 ? -1 : 1);
+	return (write(1, &c, 1));
 }
 
 int	ft_log_str(va_list *args)
@@ -28,11 +28,7 @@ int	ft_log_str(va_list *args)
 	count = 0;
 	s = va_arg(*args, char *);
 	if (!s)
-	{
-		if (write(1, "(null)", 6) == -1)
-			return (-1);
-		return (6);
-	}
+		return (ft_writer("(null)"));
 	while (*s)
 	{
 		if (write(1, s, 1) == -1)
@@ -46,5 +42,5 @@ int	ft_log_str(va_list *args)
 int	ft_log_percent(va_list *args)
 {
 	(void)args;
-	return (write(1, "%", 1) == -1 ? -1 : 1);
+	return (write(1, "%", 1));
 }

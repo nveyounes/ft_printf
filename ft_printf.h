@@ -6,7 +6,7 @@
 /*   By: yfarhat <yfarhat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/16 18:51:49 by yfarhat           #+#    #+#             */
-/*   Updated: 2026/11/19 20:47:14 by yfarhat          ###   ########.fr       */
+/*   Updated: 2026/11/24 15:21:39 by yfarhat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,10 @@ int			ft_log_i(va_list *args);
 void		init_table(t_fmt_fn arr[128]);
 int			ft_printf(char const *format, ...);
 int			ft_u(va_list *args);
-int			ft_x(va_list *args);
-int			ft_X(va_list *args);
+int			ft_small_x(va_list *args);
+int			ft_big_x(va_list *args);
 int			ft_p(va_list *args);
-int			ft_all_in_one_base(int n, const char *base, int base_number);
+int			ft_all_in_one_base(unsigned long n, const char *base,
+				int base_number);
 
 #endif
